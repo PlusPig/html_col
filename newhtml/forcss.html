@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS方案</title>
+    <link rel="stylesheet" href="outside/public.css" />
+    <!--*表示对所有的组件生效-->
+    <style>
+      * {
+        font-size: 10px;
+      }
+      h1 {
+        color: orange;
+        font-size: 20px;
+      }
+      h3 {
+        color: aqua;
+        font-size: 30px;
+      }
+      span {
+        color: red;
+        font-size: 20px;
+      }
+      <!--全局方案-- >
+    </style>
+  </head>
+  <body>
+    <!--style表示选择器-->
+    <p>二级首页</p>
+    <h1>hahahah哈</h1>
+    <h3>3 title</h3>
+    <!-- 有全局方案的，也有局部方案的-->
+    <h3 style="color: blueviolet">不利于维护</h3>
+
+    <p>learn css after learn <span>java</span> okok</p>
+  </body>
+</html>
