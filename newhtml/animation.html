@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: myanim 2s linear 0.5s infinite;
+        align-items: center;
+        margin: auto;
+        border-radius: 20%;
+      }
+      div:hover {
+        /*background-color: orange;*/
+        animation-play-state: paused;
+      }
+
+      @keyframes myanim {
+        0% {
+          width: 200px;
+          background-color: brown;
+        }
+        25% {
+          width: 180px;
+          background-color: aquamarine;
+        }
+        50% {
+          width: 150px;
+          background-color: chocolate;
+        }
+        75% {
+          width: 180px;
+          background-color: darkgray;
+        }
+        100% {
+          width: 200px;
+          background-color: darkgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>小米</div>
+  </body>
+</html>

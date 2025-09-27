@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*因为下面会继承上面的div的属性，所以不要在这里写*/
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        z-index: 100;
+      }
+      .box2 {
+        width: 400px;
+        height: 200px;
+        background-color: gold;
+        z-index: 50;
+      }
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        top: 100px;
+        z-index: 300;
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        position: fixed; /*表示固定定位*/
+        bottom: 100px;
+        right: 100px;
+      }
+      p {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box2">box2</div>
+    <div class="box1">box1</div>
+
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+
+    <p>hahahaha</p>
+    <p>hahahaha</p>
+    <p>hahahaha</p>
+    <p>hahahaha</p>
+    <p>hahahaha</p>
+    <p>hahahaha</p>
+    <!--z-index 可以控制谁覆盖谁-->
+  </body>
+</html>
