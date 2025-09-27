@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var age, name, gender;
+      var person = {
+        age: 20, //这里赋值是：
+        name,
+        gender: "male",
+      };
+      console.log(typeof age);
+      console.log(typeof name);
+      console.log(typeof person);
+
+      {
+        name = "aaaa";
+      }
+      let obj = {
+        name: "aaaa",
+      };
+      //let表示块作用域，不会像var一样作用于整个函数
+      if (true) {
+        let x = 10;
+        console.log(x);
+      }
+      //   console.log(x);
+    </script>
+  </body>
+</html>
