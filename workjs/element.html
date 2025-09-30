@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>box1</div>
+    <div>box2</div>
+    <p class="text">phello</p>
+    <p id="root">hahaha</p>
+    <div class="nav">nav1</div>
+    <div class="nav">nav2</div>
+    <script>
+      var div1 = document.getElementsByTagName("div")[1];
+      console.log(div1);
+      div1.innerHTML = "Heelowwwww";
+      var text1 = document.getElementsByClassName("text")[0];
+      console.log(text1);
+
+      var root = document.getElementById("root")[0];
+      console.log(root);
+
+      var nav = document.querySelector(".nav");
+      console.log(nav);
+
+      var navs = document.querySelectorAll(".nav")[1];
+      console.log(navs);
+    </script>
+  </body>
+</html>
