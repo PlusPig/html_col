@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      box1 {
+        width: 100px;
+        height: 50px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn1" class="box1">单击</div>
+    <button id="btn2">双击</button>
+    <button id="btn3">按下鼠标</button>
+    <button id="btn4">鼠标离开</button>
+    <button id="btn5">鼠标move</button>
+    <button id="btn6">离开</button>
+    <script>
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+      var btn4 = document.getElementById("btn4");
+      var btn3 = document.getElementById("btn3");
+
+      btn1.onclick = function (event) {
+        console.log("单击");
+      };
+      btn2.ondblclick = function () {
+        console.log("双机");
+      };
+      btn3.onmousedown = function () {
+        console.log("按下鼠标");
+      };
+      btn4.onmouseleave = function () {
+        console.log("鼠标离开");
+      };
+      btn5.onmousemove = function () {
+        console.log("鼠标move");
+      };
+      btn6.onmouseover = function () {
+        console.log("鼠标离开");
+      };
+    </script>
+  </body>
+</html>
