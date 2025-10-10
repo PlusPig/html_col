@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        getname() {
+          console.log(this.name);
+        }
+      }
+      var P = new Person("zhangsan", 20);
+      console.log(P.name);
+      //static方法只能通过类名调用，Person.getname()，不能通过实例调用
+
+      class Student extends Person {
+        constructor(name, age, sno) {
+          super(name, age); //调用父类的构造函数
+          //最好用super()，而不是Person.call(this,name,age)
+          this.sno = sno;
+        }
+        getSno() {
+          console.log(this.sno);
+        }
+      }
+    </script>
+  </body>
+</html>
