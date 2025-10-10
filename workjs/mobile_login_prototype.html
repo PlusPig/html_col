@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动端登录原型设计</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "PingFang SC", sans-serif;
+        display: flex;
+        background: #f7f8fc;
+        height: 100vh;
+      }
+
+      /* === 左侧移动端原型 === */
+      .phone {
+        width: 375px;
+        height: 812px;
+        margin: auto 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .phone-header {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 80px;
+        color: #333;
+      }
+
+      .login-container {
+        width: 80%;
+        margin: 40px auto;
+      }
+
+      .input-group {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 14px 45px 14px 15px;
+        border: 1.5px solid #ddd;
+        border-radius: 12px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        outline: none;
+      }
+
+      .input-group input:focus {
+        border-color: #5a8dee;
+        box-shadow: 0 0 8px rgba(90, 141, 238, 0.3);
+      }
+
+      .input-group .toggle-password {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        font-size: 18px;
+        color: #999;
+        cursor: pointer;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 14px 0;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #5a8dee, #825ee4);
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .login-btn:active {
+        transform: scale(0.98);
+        background: linear-gradient(135deg, #4a7cd8, #7152d6);
+      }
+
+      .login-footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #888;
+      }
+
+      /* === 右侧设计说明 === */
+      .desc {
+        flex: 1;
+        padding: 40px;
+        overflow-y: auto;
+        color: #333;
+      }
+
+      .desc h2 {
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      .desc p {
+        margin: 6px 0;
+        line-height: 1.5;
+      }
+
+      .desc ul {
+        margin: 8px 0 20px 20px;
+      }
+
+      @media (max-width: 900px) {
+        body {
+          flex-direction: column;
+          align-items: center;
+          overflow-y: scroll;
+        }
+        .desc {
+          width: 90%;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- === 移动端登录原型 === -->
+    <div class="phone">
+      <div class="phone-header">用户登录</div>
+      <div class="login-container">
+        <div class="input-group">
+          <input type="text" placeholder="请输入账号" id="username" />
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="请输入密码" id="password" />
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+        <button class="login-btn" onclick="login()">登录</button>
+        <div class="login-footer">© 2025 PlusPig Design Studio</div>
+      </div>
+    </div>
+
+    <!-- === 设计说明区 === -->
+    <div class="desc">
+      <h2>📱 原型设计说明</h2>
+      <ul>
+        <li><b>整体风格：</b>极简 + 柔和阴影，贴近现代App登录页。</li>
+        <li><b>尺寸比例：</b>基于 iPhone X (375×812px) 可视区域。</li>
+        <li>
+          <b>交互设计：</b>
+          <ul>
+            <li>输入框聚焦高亮，边框蓝色渐变发光。</li>
+            <li>密码右侧可点击 👁️ 图标切换明文/密文。</li>
+            <li>登录按钮点击有缩放反馈。</li>
+          </ul>
+        </li>
+        <li><b>视觉层次：</b>主按钮使用渐变蓝紫提升主导性。</li>
+        <li><b>适配说明：</b>在桌面浏览器中也能模拟移动端比例。</li>
+        <li><b>可截图展示：</b>一屏即可同时显示原型与设计说明。</li>
+      </ul>
+      <p>👉 该页面为交互型原型，可直接演示登录流程的视觉与行为体验。</p>
+    </div>
+
+    <script>
+      function togglePassword() {
+        const pwd = document.getElementById("password");
+        pwd.type = pwd.type === "password" ? "text" : "password";
+      }
+
+      function login() {
+        const u = document.getElementById("username").value.trim();
+        const p = document.getElementById("password").value.trim();
+        if (!u || !p) {
+          alert("请输入账号和密码");
+          return;
+        }
+        alert(`登录成功！欢迎，${u}`);
+      }
+    </script>
+  </body>
+</html>

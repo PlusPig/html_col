@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var s = new Set();
+      var arr = [10, 20, 20, 20, 30, 30, 40];
+      for (i of arr) {
+        s.add(i);
+      }
+      console.log(s);
+      console.log([...new Set(arr)]);
+      //中括号表示放到数组中
+      //set的方法：add,delete,has,clear
+    </script>
+  </body>
+</html>

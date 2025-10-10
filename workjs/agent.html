@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ull">
+      <li>col1</li>
+      <li>col2</li>
+    </ul>
+    <script>
+      //var list = document.getElementById("ull");
+      //   list.onclick = function (event) {
+      //     console.log("dianji");
+      //   };
+      ull.addEventListener("click", function (event) {
+        console.log(event.target.name);
+        if (event.target.tagName === "LI") {
+          console.log("li标签"); // 输出被点击的 li 的文本内容
+        }
+      });
+    </script>
+  </body>
+</html>

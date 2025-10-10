@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var settimeout = setTimeout(function () {
+        console.log("1s");
+      }, 1000);
+      var name = "haha";
+      var user = {
+        name: "zhangsan",
+        getname: function () {
+          setTimeout(function () {
+            console.log(this.name);
+          }, 1000);
+        },
+      };
+      var i = 0;
+      setInterval(function () {
+        i++;
+        console.log(i);
+        if (i == 100) {
+          clearInterval(setInterval);
+        }
+      }, 1000);
+      user.getname();
+    </script>
+  </body>
+</html>
